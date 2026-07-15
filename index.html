@@ -11,25 +11,15 @@
  INSTRUCCIONES PARA CARLOS — LEER ANTES DE PUBLICAR
 ============================================================
 1) FORMULARIO HUBSPOT
-   El formulario de la sección "form" (busca el bloque marcado FORMULARIO
-   más abajo) está construido en HTML puro como vista previa, con los campos que
-   pediste: Nombre, Teléfono, Ciudad de interés, Tipo de plan.
-   Ahora mismo NO envía datos a ningún lado.
-
-   Cuando tengas el Portal ID y Form ID de HubSpot:
-   a) Ve a HubSpot > Marketing > Formularios > [tu formulario] > Compartir > Insertar código.
-   b) Copia el <script> que te da HubSpot (usa la librería hsforms.net).
-   c) Reemplaza todo el bloque marcado "FORMULARIO" por ese script.
-   d) Asegúrate de que los campos internos en HubSpot se llamen igual
-      (nombre, teléfono, ciudad de interés con opciones Guadalajara /
-      Monterrey / Ciudad de México / Saltillo / Otra, y tipo de plan con
-      opciones Plan de previsión / Uso inmediato / Información general)
-      para que el mapeo de datos sea automático.
+   Ya está conectado. Portal 23445865 / Form 00176ec8-4b6d-49de-b593-a28a668bd3fa,
+   cargado dentro de la sección "form" vía el script oficial de HubSpot
+   (hsforms.net). Si en algún momento HubSpot cambia el código de inserción,
+   reemplaza el <div id="hubspot-form-container"> y el <script> que lo llenan.
 
 2) WHATSAPP
-   Botón flotante y botones de "Escríbenos por WhatsApp" apuntan a
-   https://wa.me/528115282431 (mismo número que ya usan en decodigital.mx).
-   Si quieres un mensaje predefinido distinto, edita el texto después de "?text=".
+   Botón flotante y botones de "Escríbenos por WhatsApp" apuntan al link corto
+   https://decodigital.trb.ai/wa/bGvRqkP. Si ese link cambia, hay que
+   actualizarlo en los 6 botones de la página (busca "trb.ai").
 
 3) TELÉFONO
    Toda la página usa un único número de voz: 844 288 8020.
@@ -239,7 +229,7 @@
     <a class="logo" href="https://decodigital.mx/proteccion-funeral" target="_blank" rel="noopener"><img src="images/logo.png" alt="Protecto Deco"></a>
     <div class="header-cta">
       <a class="header-phone" href="tel:+528442888020">📞 844 288 8020</a>
-      <a class="btn btn-whatsapp" href="https://wa.me/528115282431?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20servicios%20funerarios%20en%20Saltillo" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-whatsapp" href="https://decodigital.trb.ai/wa/bGvRqkP" target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn btn-primary" href="#form">Solicitar información</a>
     </div>
   </div>
@@ -252,7 +242,7 @@
     <h1>El acto de amor más grande es proteger la tranquilidad de los que más amas</h1>
     <p class="lead">Capilla propia y parque funeral en Saltillo. Planes de previsión con financiamiento y atención inmediata las 24 horas, con el respaldo de más de 50 años de Protecto Deco.</p>
     <div class="hero-actions">
-      <a class="btn btn-whatsapp" href="https://wa.me/528115282431?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20servicios%20funerarios%20en%20Saltillo" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
+      <a class="btn btn-whatsapp" href="https://decodigital.trb.ai/wa/bGvRqkP" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
       <a class="btn btn-outline" href="#form">Cotizar sin compromiso</a>
     </div>
     <div class="hero-stats">
@@ -280,48 +270,21 @@
         <div class="eyebrow" style="color:#c9e26a;">Cotización sin compromiso</div>
         <h2>¿Deseas una cotización a tu medida?</h2>
         <p>Un asesor experto te acompaña en el proceso y resuelve todas tus preguntas, sin compromiso. También puedes escribirnos directo por WhatsApp.</p>
-        <a class="btn btn-whatsapp" href="https://wa.me/528115282431?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20servicios%20funerarios%20en%20Saltillo" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
+        <a class="btn btn-whatsapp" href="https://decodigital.trb.ai/wa/bGvRqkP" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
       </div>
 
-      <!--
-        ↓↓↓ REEMPLAZAR ESTE BLOQUE CON EL EMBED CODE DE HUBSPOT ↓↓↓
-        Ver instrucciones completas al inicio del archivo.
-      -->
       <div class="form-card">
-        <form id="lead-form" onsubmit="return false;">
-          <div class="form-field">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-          </div>
-          <div class="form-field">
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="10 dígitos" required>
-          </div>
-          <div class="form-field">
-            <label for="ciudad">Ciudad de interés</label>
-            <select id="ciudad" name="ciudad" required>
-              <option value="">Selecciona...</option>
-              <option value="Saltillo" selected>Saltillo</option>
-              <option value="Guadalajara">Guadalajara</option>
-              <option value="Monterrey">Monterrey</option>
-              <option value="Ciudad de México">Ciudad de México</option>
-              <option value="Otra">Otra</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="plan">Tipo de plan</label>
-            <select id="plan" name="plan" required>
-              <option value="">Selecciona...</option>
-              <option value="Plan de previsión">Plan de previsión</option>
-              <option value="Uso inmediato">Uso inmediato</option>
-              <option value="Información general">Información general</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Enviar</button>
-          <p class="form-note">Vista previa del formulario — pendiente de conectar a HubSpot. Ver instrucciones en el código fuente.</p>
-        </form>
+        <div id="hubspot-form-container"></div>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            portalId: "23445865",
+            formId: "00176ec8-4b6d-49de-b593-a28a668bd3fa",
+            region: "na1",
+            target: "#hubspot-form-container"
+          });
+        </script>
       </div>
-      <!-- ↑↑↑ FIN DEL BLOQUE A REEMPLAZAR ↑↑↑ -->
 
     </div>
   </div>
@@ -378,7 +341,7 @@
           <div class="loc-row"><b>Instalaciones</b><span>4 salas tradicionales y cafetería compartida</span></div>
           <div class="loc-actions">
             <a class="btn btn-primary" href="tel:+528442888020">Llamar</a>
-            <a class="btn btn-whatsapp" href="https://wa.me/528115282431?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20capilla%20en%20Saltillo" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-whatsapp" href="https://decodigital.trb.ai/wa/bGvRqkP" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
       </div>
@@ -391,7 +354,7 @@
           <div class="loc-row"><b>Propiedades</b><span>Tipo americano y tradicionales</span></div>
           <div class="loc-actions">
             <a class="btn btn-primary" href="tel:+528442888020">Llamar</a>
-            <a class="btn btn-whatsapp" href="https://wa.me/528115282431?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20parque%20funeral%20en%20Saltillo" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-whatsapp" href="https://decodigital.trb.ai/wa/bGvRqkP" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
       </div>
@@ -483,7 +446,7 @@
   </div>
 </section>
 
-<a class="wa-float" href="https://wa.me/528115282431?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20servicios%20funerarios%20en%20Saltillo" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">💬</a>
+<a class="wa-float" href="https://decodigital.trb.ai/wa/bGvRqkP" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">💬</a>
 
 </body>
 </html>
