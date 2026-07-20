@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BNX97S1TYR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BNX97S1TYR');
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Protecto Deco Saltillo | Servicios Funerarios y Planes de Previsión</title>
@@ -17,9 +26,8 @@
    reemplaza el <div id="hubspot-form-container"> y el <script> que lo llenan.
 
 2) WHATSAPP
-   Botón flotante y botones de "Escríbenos por WhatsApp" apuntan al link corto
-   https://decodigital.trb.ai/wa/bGvRqkP. Si ese link cambia, hay que
-   actualizarlo en los 6 botones de la página (busca "trb.ai").
+   Botón flotante y botones de "Escríbenos por WhatsApp" apuntan a
+   https://wa.me/528443500328. Si el número cambia, búscalo con "wa.me".
 
 3) TELÉFONO
    Toda la página usa un único número de voz: 844 288 8020.
@@ -86,7 +94,7 @@
   /* HERO */
   .hero{
     position:relative;color:#fff;
-    background:linear-gradient(180deg, rgba(30,35,20,.55), rgba(20,24,14,.75)), url("images/hero-parque.jpg") center 30%/cover no-repeat;
+    background:linear-gradient(180deg, rgba(20,20,20,.55), rgba(10,10,10,.75)), url("images/hero-inicio.jpg") center 30%/cover no-repeat;
     padding:100px 0 90px;
   }
   .hero-content{max-width:640px;}
@@ -94,14 +102,27 @@
   .hero h1{font-size:44px;margin-bottom:18px;}
   .hero p.lead{font-size:18px;margin-bottom:30px;color:#f1f1ea;}
   .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:36px;}
-  .hero-stats{display:flex;flex-wrap:wrap;gap:28px;border-top:1px solid rgba(255,255,255,.25);padding-top:24px;}
-  .hero-stat b{display:block;font-size:22px;}
-  .hero-stat span{font-size:13px;color:#e4e4dc;}
+  .hero-stats{display:flex;flex-wrap:nowrap;gap:22px;border-top:1px solid rgba(255,255,255,.25);padding-top:24px;max-width:fit-content;}
+  .hero-stat{white-space:nowrap;}
+  .hero-stat b{display:block;font-size:28px;font-weight:800;color:#d7ec7a;letter-spacing:-.01em;}
+  .hero-stat span{font-size:11px;font-weight:600;color:#f1f1ea;text-transform:uppercase;letter-spacing:.02em;}
+  @media(max-width:520px){
+    .hero-stats{flex-wrap:wrap;max-width:none;}
+  }
   @media(max-width:640px){ .hero h1{font-size:32px;} .hero{padding:70px 0 60px;} }
 
   /* TRUST STRIP */
-  .trust-strip{background:var(--gris);color:#fff;padding:18px 0;}
-  .trust-strip .container{display:flex;flex-wrap:wrap;justify-content:space-around;gap:16px;text-align:center;font-size:14px;font-weight:600;}
+  .trust-strip{background:var(--gris);color:#fff;padding:16px 0;}
+  .trust-strip .container{max-width:1280px;display:flex;flex-wrap:nowrap;justify-content:center;gap:22px;text-align:center;font-size:12.5px;font-weight:600;}
+  .trust-item{display:flex;align-items:center;gap:7px;white-space:nowrap;}
+  .trust-item img{width:17px;height:17px;object-fit:contain;flex:none;filter:brightness(0) invert(1);}
+  @media(max-width:900px){
+    .trust-strip .container{flex-wrap:wrap;justify-content:space-around;white-space:normal;}
+    .trust-item{white-space:normal;}
+  }
+  @media(max-width:640px){
+    .trust-strip .container{flex-direction:column;align-items:flex-start;text-align:left;}
+  }
 
   section{padding:72px 0;}
   .section-head{max-width:640px;margin-bottom:40px;}
@@ -118,8 +139,9 @@
   }
   .service-card .icon{
     width:44px;height:44px;border-radius:10px;background:var(--verde);color:#fff;
-    display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px;
   }
+  .service-card .icon img{width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);}
   .service-card h3{font-size:17px;margin-bottom:8px;}
   .service-card p{font-size:14px;color:#5c5b59;}
 
@@ -188,6 +210,7 @@
   .form-wrap{
     background:var(--gris);border-radius:18px;padding:0;overflow:hidden;
     display:grid;grid-template-columns:1fr 1fr;
+    border:1px solid var(--borde);box-shadow:0 12px 32px rgba(0,0,0,.08);
   }
   @media(max-width:820px){ .form-wrap{grid-template-columns:1fr;} }
   .form-side{padding:44px;color:#fff;}
@@ -229,7 +252,7 @@
     <a class="logo" href="https://decodigital.mx/proteccion-funeral" target="_blank" rel="noopener"><img src="images/logo.png" alt="Protecto Deco"></a>
     <div class="header-cta">
       <a class="header-phone" href="tel:+528442888020">📞 844 288 8020</a>
-      <a class="btn btn-whatsapp" href="https://decodigital.trb.ai/wa/bGvRqkP" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/528443500328" target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn btn-primary" href="#form">Solicitar información</a>
     </div>
   </div>
@@ -242,7 +265,7 @@
     <h1>El acto de amor más grande es proteger la tranquilidad de los que más amas</h1>
     <p class="lead">Capilla propia y parque funeral en Saltillo. Planes de previsión con financiamiento y atención inmediata las 24 horas, con el respaldo de más de 50 años de Protecto Deco.</p>
     <div class="hero-actions">
-      <a class="btn btn-whatsapp" href="https://decodigital.trb.ai/wa/bGvRqkP" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/528443500328" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
       <a class="btn btn-outline" href="#form">Cotizar sin compromiso</a>
     </div>
     <div class="hero-stats">
@@ -255,10 +278,10 @@
 
 <div class="trust-strip">
   <div class="container">
-    <div>🏛️ Capilla propia en el centro de Saltillo</div>
-    <div>🌳 Parque funeral Jardín del Arcángel</div>
-    <div>🛡️ Seguro de vida incluido en planes de previsión</div>
-    <div>🔁 Servicios transferibles</div>
+    <div class="trust-item"><img src="images/icons/capilla-propia.png" alt="">Capilla propia en el centro de Saltillo</div>
+    <div class="trust-item"><img src="images/icons/parque-jardin-arcangel.png" alt="">Parque funeral Jardín del Arcángel</div>
+    <div class="trust-item"><img src="images/icons/seguro-vida.png" alt="">Seguro de vida incluido en planes de previsión</div>
+    <div class="trust-item"><img src="images/icons/servicios-transferibles.png" alt="">Servicios transferibles</div>
   </div>
 </div>
 
@@ -270,12 +293,12 @@
         <div class="eyebrow" style="color:#c9e26a;">Cotización sin compromiso</div>
         <h2>¿Deseas una cotización a tu medida?</h2>
         <p>Un asesor experto te acompaña en el proceso y resuelve todas tus preguntas, sin compromiso. También puedes escribirnos directo por WhatsApp.</p>
-        <a class="btn btn-whatsapp" href="https://decodigital.trb.ai/wa/bGvRqkP" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/528443500328" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
       </div>
 
       <div class="form-card">
         <div id="hubspot-form-container"></div>
-        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
         <script>
           hbspt.forms.create({
             portalId: "23445865",
@@ -300,22 +323,22 @@
     </div>
     <div class="grid-4">
       <div class="service-card">
-        <div class="icon">📋</div>
+        <div class="icon"><img src="images/icons/planes-prevision.png" alt=""></div>
         <h3>Planes de previsión</h3>
         <p>Ahorra con pagos fijos y financiamiento a 12, 24 o 36 meses, sin sorpresas al momento de usar el servicio.</p>
       </div>
       <div class="service-card">
-        <div class="icon">🚨</div>
+        <div class="icon"><img src="images/icons/atencion-urgente.png" alt=""></div>
         <h3>Atención urgente</h3>
         <p>Servicio inmediato las 24 horas, con gestión y logística completa desde el primer contacto.</p>
       </div>
       <div class="service-card">
-        <div class="icon">🕯️</div>
+        <div class="icon"><img src="images/icons/capilla-saltillo.png" alt=""></div>
         <h3>Capilla en Saltillo</h3>
         <p>4 salas tradicionales en el centro de la ciudad, diseñadas para el confort y el recogimiento de tu familia.</p>
       </div>
       <div class="service-card">
-        <div class="icon">🌳</div>
+        <div class="icon"><img src="images/icons/parque-funeral.png" alt=""></div>
         <h3>Parque funeral</h3>
         <p>Jardín del Arcángel: propiedades tipo americano y tradicionales, en un entorno tranquilo y bien cuidado.</p>
       </div>
@@ -341,7 +364,7 @@
           <div class="loc-row"><b>Instalaciones</b><span>4 salas tradicionales y cafetería compartida</span></div>
           <div class="loc-actions">
             <a class="btn btn-primary" href="tel:+528442888020">Llamar</a>
-            <a class="btn btn-whatsapp" href="https://decodigital.trb.ai/wa/bGvRqkP" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/528443500328" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
       </div>
@@ -354,7 +377,7 @@
           <div class="loc-row"><b>Propiedades</b><span>Tipo americano y tradicionales</span></div>
           <div class="loc-actions">
             <a class="btn btn-primary" href="tel:+528442888020">Llamar</a>
-            <a class="btn btn-whatsapp" href="https://decodigital.trb.ai/wa/bGvRqkP" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/528443500328" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
       </div>
@@ -384,7 +407,7 @@
       </div>
     </div>
     <div>
-      <img src="images/familia-prevision.jpg" alt="Familia planificando su previsión funeraria con Protecto Deco" style="border-radius:14px;">
+      <img src="images/porque-anticiparse.jpg" alt="Familia disfrutando su tranquilidad gracias a la previsión con Protecto Deco" style="border-radius:14px;">
     </div>
   </div>
 </section>
@@ -446,7 +469,7 @@
   </div>
 </section>
 
-<a class="wa-float" href="https://decodigital.trb.ai/wa/bGvRqkP" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">💬</a>
+<a class="wa-float" href="https://wa.me/528443500328" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">💬</a>
 
 </body>
 </html>
